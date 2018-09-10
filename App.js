@@ -10,12 +10,14 @@ const styles = StyleSheet.create({
   },
 });
 
-const message1 = '詳しくは0120-000-0000へお問い合わせください';
+const message1 = '詳しくは0120-000-000へお問い合わせください';
 const message2 = '詳しくは店頭へ';
-const message3 = '詳しくは045-000-0000\nもしくは03-0000-0000へお問い合わせください';
+const message3 =
+  '詳しくは045-000-0000へ、\nもしくは03-0000-0000へ、\nもしくは045-000-0000にお問い合わせください';
+const message4 = '詳しくは0120-000-000';
 
 // 0xxx-xxx-xxx or 0xx-xxx-xxxx or 0x-xxxx-xxxx
-const reg = /0[0-9]{3}-[0-9]{3}-[0-9]{3}|0[0-9]{2}-[0-9]{3}-[0-9]{4}|0[0-9]{1}-[0-9]{4}-[0-9]{4}/;
+const reg = /0[0-9]{3}-[0-9]{3}-[0-9]{3}|0[0-9]{2}-[0-9]{3}-[0-9]{4}|0[0-9]{1}-[0-9]{4}-[0-9]{4}/g;
 
 const openTel = phoneNumber => Linking.openURL(`tel:${phoneNumber}`).catch(alert);
 
@@ -25,26 +27,19 @@ const PhoneText = ({ phoneNumber }) => (
   </Text>
 );
 
-const replaceTel = message => {
-  let str = message;
-  let splitMessage = [];
-  let r = [];
-
-  while (true) {
-    const result = str.match(reg);
-    if (!result) break;
-    const phoneNumber = result[0];
-    splitMessage = str.split(phoneNumber);
-    r = [...r, splitMessage[0], <PhoneText phoneNumber={phoneNumber} />];
-    str = splitMessage[1];
-  }
-  return r.length ? [...r, splitMessage[1]] : message;
+const replacePhoneNumber = message => {
+  const phoneNumbers = message.match(reg);
+  if (!phoneNumbers) return message;
+  return message.split(reg).reduce((result, text, i) => {
+    return [...result, text, <PhoneText key={i} phoneNumber={phoneNumbers[i]} />];
+  }, []);
 };
 
 export default () => (
   <View style={styles.container}>
-    <Text>{replaceTel(message1)}</Text>
-    <Text>{replaceTel(message2)}</Text>
-    <Text>{replaceTel(message3)}</Text>
+    <Text>{replacePhoneNumber(message1)}</Text>
+    <Text>{replacePhoneNumber(message2)}</Text>
+    <Text>{replacePhoneNumber(message3)}</Text>
+    <Text>{replacePhoneNumber(message4)}</Text>
   </View>
 );
