@@ -20,6 +20,16 @@ const replacePhoneNumber = message => {
   }, []);
 };
 
+// コメントない方が見やすいかも
+// const replacePhoneNumber = message => {
+//   const phoneNumbers = message.match(reg);
+//   if (!phoneNumbers) return message;
+
+//   return message.split(reg).reduce((result, text, i) => {
+//     return [...result, text, phoneNumbers[i] && <PhoneText key={i} phoneNumber={phoneNumbers[i]} />];
+//   }, []);
+// };
+
 const LinkablePhoneText = ({ children }) => <Text>{replacePhoneNumber(children)}</Text>;
 
 export default LinkablePhoneText;
