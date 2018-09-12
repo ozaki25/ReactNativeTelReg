@@ -5,6 +5,12 @@ exports[`#LinkablePhoneText 文字列だけの場合 改行ありの場合、そ
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#bbb",
+      "fontSize": 16,
+    }
+  }
 >
   恐れ入りますが、
 窓口までお越し下さい
@@ -16,6 +22,12 @@ exports[`#LinkablePhoneText 文字列だけの場合 改行なしの場合、そ
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#bbb",
+      "fontSize": 16,
+    }
+  }
 >
   窓口までお越し下さい
 </Text>
@@ -26,6 +38,12 @@ exports[`#LinkablePhoneText 電話番号だけの場合 電話番号が一つの
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#bbb",
+      "fontSize": 16,
+    }
+  }
 >
   
   <Text
@@ -36,6 +54,8 @@ exports[`#LinkablePhoneText 電話番号だけの場合 電話番号が一つの
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
@@ -50,6 +70,12 @@ exports[`#LinkablePhoneText 電話番号だけの場合 電話番号が一つの
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#bbb",
+      "fontSize": 16,
+    }
+  }
 >
   
   <Text
@@ -60,6 +86,8 @@ exports[`#LinkablePhoneText 電話番号だけの場合 電話番号が一つの
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
@@ -74,6 +102,12 @@ exports[`#LinkablePhoneText 電話番号だけの場合 電話番号が一つの
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#bbb",
+      "fontSize": 16,
+    }
+  }
 >
   
   <Text
@@ -84,6 +118,8 @@ exports[`#LinkablePhoneText 電話番号だけの場合 電話番号が一つの
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
@@ -98,6 +134,12 @@ exports[`#LinkablePhoneText 電話番号だけの場合 電話番号が複数の
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#bbb",
+      "fontSize": 16,
+    }
+  }
 >
   
   <Text
@@ -108,6 +150,8 @@ exports[`#LinkablePhoneText 電話番号だけの場合 電話番号が複数の
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
@@ -122,6 +166,8 @@ exports[`#LinkablePhoneText 電話番号だけの場合 電話番号が複数の
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
@@ -136,6 +182,8 @@ exports[`#LinkablePhoneText 電話番号だけの場合 電話番号が複数の
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
@@ -150,6 +198,12 @@ exports[`#LinkablePhoneText 電話番号と文字列を含む場合 電話番号
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#bbb",
+      "fontSize": 16,
+    }
+  }
 >
   お問い合わせは
   <Text
@@ -160,6 +214,8 @@ exports[`#LinkablePhoneText 電話番号と文字列を含む場合 電話番号
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
@@ -174,6 +230,12 @@ exports[`#LinkablePhoneText 電話番号と文字列を含む場合 電話番号
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#bbb",
+      "fontSize": 16,
+    }
+  }
 >
   
   <Text
@@ -184,6 +246,8 @@ exports[`#LinkablePhoneText 電話番号と文字列を含む場合 電話番号
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
@@ -198,6 +262,12 @@ exports[`#LinkablePhoneText 電話番号と文字列を含む場合 電話番号
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#bbb",
+      "fontSize": 16,
+    }
+  }
 >
   次の番号にご連絡ください
   <Text
@@ -208,6 +278,8 @@ exports[`#LinkablePhoneText 電話番号と文字列を含む場合 電話番号
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
@@ -222,6 +294,12 @@ exports[`#LinkablePhoneText 電話番号と文字列を含む場合 電話番号
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "#bbb",
+      "fontSize": 16,
+    }
+  }
 >
   お問い合わせは
   <Text
@@ -232,6 +310,8 @@ exports[`#LinkablePhoneText 電話番号と文字列を含む場合 電話番号
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
@@ -246,6 +326,8 @@ exports[`#LinkablePhoneText 電話番号と文字列を含む場合 電話番号
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
@@ -261,6 +343,8 @@ exports[`#LinkablePhoneText 電話番号と文字列を含む場合 電話番号
     style={
       Object {
         "color": "blue",
+        "fontSize": 16,
+        "textDecorationLine": "underline",
       }
     }
   >
