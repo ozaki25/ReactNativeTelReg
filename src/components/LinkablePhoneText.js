@@ -14,9 +14,9 @@ const replacePhoneNumber = message => {
 
   // ex. message.split(reg) = ['お問い合わせは', 'もしくは', 'へお願いします']
   return message.split(reg).reduce((result, text, i) => {
-    // ex. ループ一周目 ['お問い合わせは', <PhoneTtext phoneNumber="03-0000-0000" />]
-    // ex. ループ二周目 ['お問い合わせは', <PhoneTtext phoneNumber="03-0000-0000" />, 'もしくは', <PhoneTtext phoneNumber="0120-000-000" />]
-    // ex. ループ三周目 ['お問い合わせは', <PhoneTtext phoneNumber="03-0000-0000" />, 'もしくは', <PhoneTtext phoneNumber="0120-000-000" />, へお願いします]
+    // ex. ループ一周目 result = [], text = 'お問い合わせは', i = 0
+    // ex. ループ二周目 result = ['お問い合わせは', <PhoneTtext phoneNumber="03-0000-0000" />], text = 'もしくは', i = 1
+    // ex. ループ三周目 result = ['お問い合わせは', <PhoneTtext phoneNumber="03-0000-0000" />, 'もしくは', <PhoneTtext phoneNumber="0120-000-000" />], text = 'へお願いします', i = 2
     return [...result, text, phoneNumbers[i] && <PhoneText key={i} phoneNumber={phoneNumbers[i]} />];
   }, []);
 };
