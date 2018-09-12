@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
+import PropTypes from 'prop-types';
 import PhoneText from './PhoneText';
 
 // 0xxx-xxx-xxx or 0xx-xxx-xxxx or 0x-xxxx-xxxx
@@ -32,6 +33,19 @@ const replacePhoneNumber = message => {
 };
 */
 
-const LinkablePhoneText = ({ children }) => <Text>{replacePhoneNumber(children)}</Text>;
+const styles = StyleSheet.create({
+  text: {
+    color: '#bbb',
+    fontSize: 16,
+  },
+});
+
+const LinkablePhoneText = ({ children }) => (
+  <Text style={styles.text}>{replacePhoneNumber(children)}</Text>
+);
+
+LinkablePhoneText.propTypes = {
+  children: PropTypes.string.isRequired,
+};
 
 export default LinkablePhoneText;
